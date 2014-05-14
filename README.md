@@ -1,4 +1,4 @@
-geant4-lowbg-example
+2014 May 16 == Computer Day @ SNOLab
 ====================
 
-A Geant4.10.00.p01 example for low background experiments
+Here you will find specific examples I use throughout the source.
