@@ -1,15 +1,15 @@
 import numpy
 
-roll = lambda n: int(numpy.ceil(numpy.random.rand()*n))
 Nsims = 500000
+nroll = lambda n,d: sum([int(numpy.ceil(numpy.random.rand()*d)) for i in range(n)])
 
 r3d8 = numpy.zeros(25)
 r4d6 = numpy.zeros(25)
 r8d3 = numpy.zeros(25)
 for i in range(Nsims):
-    r3d8[sum([roll(8),roll(8),roll(8)])]+=1
-    r4d6[sum([roll(6),roll(6),roll(6),roll(6)])]+=1
-    r8d3[sum([roll(3),roll(3),roll(3),roll(3),roll(3),roll(3),roll(3),roll(3)])]+=1
+    r3d8[nroll(3,8)]+=1
+    r4d6[nroll(4,6)]+=1
+    r8d3[nroll(8,3)]+=1
 
 import matplotlib.pyplot as plt
 
