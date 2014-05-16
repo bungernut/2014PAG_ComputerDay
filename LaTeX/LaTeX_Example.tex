@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}  	% Lets you install pictures
+\usepackage{amssymb}    % Cool Math symbols
+\usepackage{hyperref}	% clickable hyperlinks
+
+\begin{document}
+
+\title{Introduction to \LaTeX{}}
+\author{Erica Caden}
+\date{\today}
+
+\maketitle
+
+% This isn't always needed
+\begin{abstract}
+To get the references to labels in figures, tables, and citations correct, compile the document twice. 
+\end{abstract}
+
+\section{Introduction}
+As you see in Eq.~\ref{eq:simple}, we can write pretty equations.\begin{equation}
+    \label{eq:simple}
+    \alpha = \frac{1}{\sqrt{\beta}}
+\end{equation}
+
+\subsection{My Favourite Subsection}
+Figure~\ref{fig:myfigure} shows the simulation results.  \LaTeX references are available online, especially~\cite{wikibooks} and ~\cite{stackexchange}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=2.0in]{duck.png}
+    \caption{Quackable Simulation Results}
+    \label{fig:myfigure}
+\end{figure}
+
+\section{Conclusion}
+See the information in Table~\ref{tab:myinfo}. We include an important fact here\footnote{And we have a footnote making a joke about that fact here}.  A printable cheat sheet is available too~\cite{cheatsheet}.  A classic dead-tree reference book is Ref.~\cite{lamport94}.
+
+\begin{table}[htdp]
+\caption{Tables of numbers}
+\begin{center}
+\begin{tabular}{ l | c || r } %left, centre, and right adjusted columns
+  \hline                       
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\  
+  10&11&$\Xi$\\ \hline  
+\end{tabular}
+\end{center}
+\label{tab:myinfo} 
+\end{table}
+
+%This is a simple bibliography 
+\begin{thebibliography}{99}
+
+\bibitem{lamport94}
+  Leslie Lamport,  \emph{\LaTeX: A Document Preparation System}.  Addison Wesley, Massachusetts,  2nd Edition,  1994.
+\bibitem{wikibooks} \texttt{https://en.wikibooks.org/wiki/LaTeX}
+\bibitem{stackexchange} \texttt{https://tex.stackexchange.com/}
+\bibitem{cheatsheet} \texttt{http://stdout.org/~winston/latex/latexsheet.pdf}
+
+\end{thebibliography}
+
+%This is ALWAYS the last line in your document!
+\end{document}
